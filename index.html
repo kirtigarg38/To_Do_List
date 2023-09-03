@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        #container {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .delete-button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Add styling for checkboxes */
+        .task-checkbox {
+            margin-right: 10px;
+        }
+        .task-checkbox {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .task-checkbox:checked {
+            background-color: #4caf50;
+            border-color: #4caf50;
+        }
+
+        .task-checkbox::before {
+            content: "\2713"; 
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .task-checkbox:checked::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>To-Do List</h1>
+        <div>
+            <input type="text" id="task" placeholder="Enter a new task">
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
