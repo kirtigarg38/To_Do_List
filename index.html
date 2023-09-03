@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <style>
+    
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f2f2f2;
+            background-color: #efefef;
+        }
+        header {
+            background-color: #ea0317; 
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
         }
 
         #container {
@@ -119,8 +126,14 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>
+            <img src="https://media.istockphoto.com/id/1303877287/vector/paper-checklist-and-pencil-flat-pictogram.jpg?s=612x612&w=0&k=20&c=NoqPzn94VH2Pm7epxF8P5rCcScMEAiGQ8Hv_b2ZwRjY=" alt="Notebook Icon" width="50" height="50">
+            
+            To-Do-List</h1>
+        <p>Effortlessly Manage Your Tasks and Boost Productivity</p>
+    </header>
     <div id="container">
-        <h1>To-Do List</h1>
         <div>
             <input type="text" id="task" placeholder="Enter a new task">
             <button onclick="addTask()">Add</button>
